@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: app/.
+      target: final
+    environment:
+      - INPUT_NAME=sample_images
+    image: comotion-image
+    volumes:
+      - comotion-output:/ml-comotion/output
+volumes:
+    comotion-output:
+        name: comotion-output-volume
